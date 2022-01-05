@@ -15,3 +15,7 @@ SELECT * FROM title_ratings LIMIT 5;
 -- 106
 Select count(distinct(language)) from title_akas;
 
+
+-- test jointure
+SELECT primaryTitle, averageRating FROM title_basics, title_ratings where title_basics.tconst = title_ratings.tconst and averageRating > 4 LIMIT 50;
+
